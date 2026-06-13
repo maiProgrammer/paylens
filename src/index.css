@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-surface: #f7f6f2;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f0efe9;
+  --color-ink: #0e0e0e;
+  --color-ink2: #3a3a3a;
+  --color-ink3: #888888;
+  --color-ink4: #bbbbbb;
+  --color-bdr: #e4e2db;
+  --color-bdr-2: #d0cec7;
+
+  --color-green: #24a366;
+  --color-green-light: #e6f5ee;
+  --color-green-border: #b6dfc8;
+  --color-green-dark: #1c7a4e;
+
+  --font-sans: 'Inter', 'system-ui', 'sans-serif';
+  --font-mono: '"IBM Plex Mono"', 'monospace';
+
+  color-scheme: light dark;
+}
+
+.dark {
+  --color-surface: #0b0b0e;
+  --color-surface-card: #141419;
+  --color-surface-muted: #1e1e24;
+  --color-ink: #f4f4f6;
+  --color-ink2: #d4d4d8;
+  --color-ink3: #a1a1aa;
+  --color-ink4: #52525b;
+  --color-bdr: #222227;
+  --color-bdr-2: #32323b;
+
+  --color-green: #2ecc71;
+  --color-green-light: rgba(46, 204, 113, 0.1);
+  --color-green-border: rgba(46, 204, 113, 0.25);
+  --color-green-dark: #27ae60;
+}
+
+@theme {
+  --color-surface: var(--color-surface);
+  --color-surface-card: var(--color-surface-card);
+  --color-surface-muted: var(--color-surface-muted);
+  --color-ink: var(--color-ink);
+  --color-ink2: var(--color-ink2);
+  --color-ink3: var(--color-ink3);
+  --color-ink4: var(--color-ink4);
+  --color-bdr: var(--color-bdr);
+  --color-bdr-2: var(--color-bdr-2);
+
+  --color-green: var(--color-green);
+  --color-green-light: var(--color-green-light);
+  --color-green-border: var(--color-green-border);
+  --color-green-dark: var(--color-green-dark);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+* {
+  border-color: var(--color-bdr);
+}
